@@ -1,0 +1,2 @@
+class BikeRoute < ApplicationRecord
+end

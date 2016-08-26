@@ -1,0 +1,21 @@
+#detail_wrapper
+  p class="title"
+    span = 'Назва'
+    br
+    = @bike_route.title
+  p class="description"
+    span = 'Опис'
+    br
+    = @bike_route.description
+  p class="author"
+    span = 'Автор'
+    br
+    = @bike_route.user_name
+  p class="rating"
+    span = 'Оцінка'
+    br
+    = @bike_route.rating
+  p class="date"
+    span = 'Створено:'
+    br
+    = @bike_route.created_at.strftime("%B, %d, %Y")
