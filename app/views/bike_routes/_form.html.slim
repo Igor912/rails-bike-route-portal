@@ -6,10 +6,17 @@
         = @bike_route.errors.full_messages.each do |msg|
           li = msg
 
-  = form.label 'Назва маршруту'
-  = form.text_field :title
+  div
+    = form.label 'Назва маршруту'
+    br
+    = form.text_field :title
 
-  = form.label 'Опис'
-  = form.text_area :description
+  div
+    = form.label 'Опис'
+    br
+    = form.text_area :description
 
-  = form.submit
+
+  br
+  div
+    = form.submit

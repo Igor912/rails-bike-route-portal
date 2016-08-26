@@ -10,6 +10,254 @@
  * files in this directory. Styles in this file should be added after the last require_* statement.
  * It is generally better to create a new file per style scope.
  *
- *= require_tree .
  *= require_self
  */
+
+@import 'normalize';
+
+* {
+  -webkit-font-smoothing: antialiased;
+}
+
+html, body {
+  font-family: 'Ubuntu', Charter, sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 500;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.flash_notice, .flash_alert {
+  padding: 8px 35px 8px 14px;
+  //margin-bottom: 20px;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+  border: 1px solid #fbeed5;
+  //-webkit-border-radius: 4px;
+  //-moz-border-radius: 4px;
+  //border-radius: 4px;
+  font-size: 14px;
+  line-height: 20px;
+}
+.flash_notice {
+  background-color: #dff0d8;
+  border-color: #d6e9c6;
+  color: #468847;
+}
+.flash_alert {
+  background-color: #f2dede;
+  border-color: #eed3d7;
+  color: #b94a48;
+}
+
+a.back_to_top {
+  display: none;
+  width: 60px;
+  height: 60px;
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+  background: #33acb7 asset_url("up_arrow.png") no-repeat center 43%;
+  text-indent: -9999px;
+  //border-radius: 30px;
+
+  &:hover {
+    background: #41cfdd asset_url("up_arrow.png") no-repeat center 43%;
+  }
+}
+
+.round_button {
+  outline: none;
+  background: transparent;
+  border: 1px solid #d6dce0;
+  padding: .5em 1.5em;
+  border-radius: 1.5em;
+  &:hover {
+    border: 1px solid #33acb7;
+    color: #33acb7;
+    a {
+      color: #33acb7 !important;
+    }
+  }
+}
+
+.button_without_border {
+  outline: none;
+  background: transparent;
+  border: none;
+  padding: .5em 1.5em;
+  &:hover {
+    color: #33acb7;
+    a {
+      color: #33acb7 !important;
+    }
+  }
+}
+
+#header {
+  padding: 2.1em 3em;
+  border-bottom: 1px solid rgba(224, 158, 109, 0.77);
+  background: rgba(210, 164, 90, 0.72);
+  color: #f5fbff;
+  p {
+    display: inline;
+  }
+  a {
+    color: #f5fbff;
+    text-decoration: none;
+  }
+  .page_title {
+    font-size: 1.4em;
+  }
+  .buttons {
+    float: right;
+    .round_button {
+      font-size: .8em;
+      margin-left: .5em;
+    }
+  }
+  .title_buttons {
+    display: inline;
+    padding-right: 2.5em;
+    .round_button {
+      font-size: .8em;
+      margin-left: .5em;
+    }
+  }
+  .button_without_border {
+    display: inline;
+    margin-top: -6px;
+    margin-bottom: -8px;
+    margin-left: 1.7em;
+  }
+}
+
+#footer {
+  padding: 2em 5%;
+  border-top: 1px solid rgba(224, 158, 109, 0.77);
+  background: rgba(210, 164, 90, 0.72);
+  color: #f5fbff;
+  font-size: .8em;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  text-align: center;
+  p {
+    display: inline;
+  }
+  a {
+    color: #f5fbff;
+    text-decoration: none;
+  }
+  .copyright{
+    float: left;
+  }
+}
+
+.content_wrapper {
+  .index_view_wrapper {
+    padding: 1.5em;
+    border-bottom: 1px solid #d6dce0;
+    span {
+      font-size: .7em;
+    }
+    a {
+      text-decoration: none;
+      color: #2a2f35;
+      font-size: 1em;
+      padding-right: 1.2em;
+      &:hover {
+        color: #33acb7;
+      }
+    }
+    .title {
+      margin: 0;
+    }
+    .description {
+      font-weight: 500;
+      color: #2a2f35;
+      margin: .5em 1.2em 0 0;
+      display:inline-block;
+    }
+    .date {
+      color: #798a95;
+      margin: .5em 1.2em 0 0;
+    }
+    .author {
+      margin: .5em 1.2em 0 0;
+      display:inline-block;
+    }
+  }
+
+  #form_wrapper {
+    padding: 0 3em 3em 3em;
+    .form {
+      width: 40%;
+      div {
+        padding-bottom: 20px;
+      }
+      textarea {
+        height: 250px;
+      }
+    }
+  }
+
+  #detail_wrapper {
+    padding: 1em 3em;
+    margin: .5em 0 2em 0;
+    span {
+      font-size: .8em;
+    }
+    .title {
+      font-size: 1.3em;
+      line-height: 1;
+    }
+    .author {
+      font-weight: 500;
+      text-decoration: none;
+      color: #2a2f35;
+    }
+    .date {
+      color: #798a95;
+    }
+  }
+}
+
+input[type="text"], input[type="email"], input[type="password"], textarea, input[type="number"] {
+  width: 90%;
+  border: 1px solid #d6dce0;
+  border-radius: .35em;
+  margin-top: 10px;
+  padding: .5em 1em;
+  line-height: 1.75;
+}
+input[type="text"] {
+  height: 30px;
+}
+textarea {
+  min-height: 180px;
+}
+input[type="number"] {
+  height: 30px;
+  width: 40%;
+  border-left: 1px solid #BBB;
+  opacity: .5;
+}
+input[type="submit"] {
+  outline: none;
+  background: transparent;
+  border: 1px solid #d6dce0;
+  padding: .5em 1.5em;
+  font-size: 1.1em;
+  border-radius: 1.5em;
+  margin-left: .5em;
+  &:hover {
+    border: 1px solid #33acb7;
+    color: #33acb7;
+  }
+}

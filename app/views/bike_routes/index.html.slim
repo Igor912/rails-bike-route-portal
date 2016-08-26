@@ -2,8 +2,7 @@
   .index_view_wrapper
     h2 class="title" = bike_route.title
     .description = bike_route.description
-    .rating = bike_route.rating
-    .user_name = bike_route.user_name
+    .author = bike_route.user_name
     .date = bike_route.created_at
     = link_to 'Деталі', bike_route
     = link_to 'Редагувати', edit_bike_route_path(bike_route)

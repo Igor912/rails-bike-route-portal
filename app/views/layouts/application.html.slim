@@ -1,0 +1,27 @@
+doctype html
+html
+  head
+    title VeloUkraine
+    = csrf_meta_tags
+
+    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => 'reload'
+    = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
+    = stylesheet_link_tag 'application', 'https://fonts.googleapis.com/css?family=Ubuntu:300'
+
+  - flash.each do |name, msg|
+    - if msg.is_a?(String)
+       - content_tag :div, msg, :class => "flash_#{name}"
+
+  body
+    #header
+      .title_buttons = link_to 'Головна', bike_routes_path
+      .title_buttons = link_to 'Велодоріжки', bike_routes_path
+      .title_buttons = link_to 'Зворотній звязок', bike_routes_path
+
+      .buttons = link_to "Вийти", bike_routes_path, :method => :delete, class: 'btn round_button'
+
+    .content_wrapper
+      == yield
+
+    #footer
+      p class="copyrighter" = "© 2016 - Ihor Khomiak"
