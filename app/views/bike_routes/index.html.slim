@@ -1,13 +1,19 @@
-- @bike_routes.each do |bike_route|
-  .index_view_wrapper
-    h2 class="title" = bike_route.title
-    .description = bike_route.description
-    .author = bike_route.user_name
-    .date = bike_route.created_at
-    = link_to 'Деталі', bike_route
-    = link_to 'Редагувати', edit_bike_route_path(bike_route)
-    = link_to 'Видалити', bike_route, data: {:confirm => 'Чи ви впевненні?'}, :method => :delete
+.index_view_wrapper
+  - @bike_routes.each do |bike_route|
+    .list_item_wrapper
+      h2 class="title" = link_to bike_route.title, bike_route
+      .description = bike_route.description
+      .author = "Автор: #{get_author_name_from_bike_route(bike_route)}"
+      .date = "#{time_ago_in_words(bike_route.created_at)} ago"
 
-br
+      //= link_to 'Деталі', bike_route
+      - if user_signed_in? && current_user.admin?
+        = link_to 'Редагувати', edit_bike_route_path(bike_route)
+        = link_to 'Видалити', bike_route, data: {:confirm => 'Чи ви впевненні?'}, :method => :delete
 
-= link_to 'Додати Веломаршрут', new_bike_route_path
+  br
+  .under_list_content
+    - if user_signed_in?
+      = link_to 'Додати Веломаршрут', new_bike_route_path, class: 'btn round_button'
+    - else
+      = link_to 'Щоб додати веломаршрут, зареєструйтесь', new_user_registration_path, class: 'btn round_button'

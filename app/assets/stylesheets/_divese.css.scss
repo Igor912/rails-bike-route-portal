@@ -1,0 +1,26 @@
+.login_wrapper {
+  padding-left: 20%;
+  padding-top: 5em;
+  h1 {
+    font-weight: 500;
+  }
+  p {
+    font-size: 1.1em;
+    line-height: 1.75;
+  }
+  a {
+    color: #33acb7;
+    font-weight: 700;
+    text-decoration: none;
+  }
+  form {
+    width: 35%;
+  }
+  .field {
+    padding-bottom: 1.4em;
+  }
+  .actions {
+    padding-bottom: 1.4em;
+    padding-top: 0.8em;
+  }
+}

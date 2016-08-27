@@ -14,6 +14,8 @@
  */
 
 @import 'normalize';
+@import 'bike_routes';
+@import 'divese';
 
 * {
   -webkit-font-smoothing: antialiased;
@@ -89,7 +91,7 @@ a.back_to_top {
   outline: none;
   background: transparent;
   border: none;
-  padding: .5em 1.5em;
+  padding: .5em .5em;
   &:hover {
     color: #33acb7;
     a {
@@ -99,10 +101,24 @@ a.back_to_top {
 }
 
 #header {
-  padding: 2.1em 3em;
-  border-bottom: 1px solid rgba(224, 158, 109, 0.77);
-  background: rgba(210, 164, 90, 0.72);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 1.75rem 0;
+  border-bottom: 7px solid #33CD99;
+  background: #2B2E2E;
   color: #f5fbff;
+  nav {
+    display: inline;
+    a {
+      text-decoration: none;
+      color: white;
+      margin-left: 1rem;
+      &:hover {
+        color: #33CD99;
+      }
+    }
+  }
   p {
     display: inline;
   }
@@ -114,11 +130,18 @@ a.back_to_top {
     font-size: 1.4em;
   }
   .buttons {
+    padding-right: 1em;
     float: right;
     .round_button {
       font-size: .8em;
       margin-left: .5em;
     }
+  }
+  .login_label {
+    float: right;
+    display: inline;
+    font-size: .9em;
+    padding-top: 0.2em;
   }
   .title_buttons {
     display: inline;
@@ -132,20 +155,16 @@ a.back_to_top {
     display: inline;
     margin-top: -6px;
     margin-bottom: -8px;
-    margin-left: 1.7em;
   }
 }
 
 #footer {
   padding: 2em 5%;
-  border-top: 1px solid rgba(224, 158, 109, 0.77);
-  background: rgba(210, 164, 90, 0.72);
+  margin-top: 5em;
+  border-top: 7px solid #33CD99;
+  background: #2B2E2E;
   color: #f5fbff;
   font-size: .8em;
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  left: 0;
   text-align: center;
   p {
     display: inline;
@@ -160,37 +179,45 @@ a.back_to_top {
 }
 
 .content_wrapper {
+  padding-top: 80px;
+  padding-bottom: 50px;
   .index_view_wrapper {
-    padding: 1.5em;
-    border-bottom: 1px solid #d6dce0;
-    span {
-      font-size: .7em;
+    .under_list_content {
+        padding-left: 20px;
+        padding-top: 10px;
     }
-    a {
-      text-decoration: none;
-      color: #2a2f35;
-      font-size: 1em;
-      padding-right: 1.2em;
-      &:hover {
-        color: #33acb7;
+    .list_item_wrapper {
+      padding: 1.5em;
+      border-bottom: 1px solid #d6dce0;
+      span {
+        font-size: .7em;
       }
-    }
-    .title {
-      margin: 0;
-    }
-    .description {
-      font-weight: 500;
-      color: #2a2f35;
-      margin: .5em 1.2em 0 0;
-      display:inline-block;
-    }
-    .date {
-      color: #798a95;
-      margin: .5em 1.2em 0 0;
-    }
-    .author {
-      margin: .5em 1.2em 0 0;
-      display:inline-block;
+      a {
+        text-decoration: none;
+        color: #1c5b47;
+        font-size: 1em;
+        padding-right: 1.2em;
+        &:hover {
+          color: #33acb7;
+        }
+      }
+      .title {
+        margin: 0;
+      }
+      .description {
+        font-weight: 500;
+        color: #2a2f35;
+        margin: .5em 1.2em 0 0;
+        display:inline-block;
+      }
+      .date {
+        color: #798a95;
+        margin: .5em 1.2em 0 0;
+        display:inline-block;
+      }
+      .author {
+        margin: .5em 1.2em 0 0;
+      }
     }
   }
 

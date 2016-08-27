@@ -1,4 +1,7 @@
 class BikeRoutesController < ApplicationController
+  before_action :authenticate_user!, except: [:index, :show]
+  before_action :check_if_its_not_admin?, only: [:edit, :destroy]
+
   def index
     @bike_routes = BikeRoute.all
   end
@@ -12,7 +15,7 @@ class BikeRoutesController < ApplicationController
   end
 
   def create
-    @bike_route = BikeRoute.new(permit_comment)
+    @bike_route = current_user.bike_routes.new(permit_bike_route)
 
     if @bike_route.save
       flash[:notice] = "Маршрут успішно додано!"
@@ -43,7 +46,16 @@ class BikeRoutesController < ApplicationController
   end
 
   private
-    def permit_comment
+    def permit_bike_route
       params.require(:bike_route).permit(:title, :description, :user_name, :rating)
+    end
+
+    def check_if_its_not_admin?
+      if user_signed_in? && current_user.admin
+        true
+      else
+        flash[:alert] = "Будь-ласка ввійдіть під своїм логіном"
+        redirect_to bike_routes_path
+      end
     end
 end

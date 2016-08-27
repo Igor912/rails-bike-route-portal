@@ -10,7 +10,7 @@
   p class="author"
     span = 'Автор'
     br
-    = @bike_route.user_name
+    = get_author_name_from_bike_route(@bike_route)
   p class="rating"
     span = 'Оцінка'
     br
