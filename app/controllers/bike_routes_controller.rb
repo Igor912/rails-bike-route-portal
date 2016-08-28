@@ -32,7 +32,7 @@ class BikeRoutesController < ApplicationController
 
   def update
     @bike_route = BikeRoute.find(params[:id])
-    if @bike_route.update(params[:bike_route].permit(:title, :description, :user_name, :rating))
+    if @bike_route.update(params[:bike_route].permit(:title, :description, :rating))
       redirect_to @bike_route
     else
       render 'edit'
@@ -47,7 +47,7 @@ class BikeRoutesController < ApplicationController
 
   private
     def permit_bike_route
-      params.require(:bike_route).permit(:title, :description, :user_name, :rating)
+      params.require(:bike_route).permit(:title, :description, :user_id, :rating)
     end
 
     def check_if_its_not_admin?
