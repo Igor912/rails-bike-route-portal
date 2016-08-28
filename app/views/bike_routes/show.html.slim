@@ -3,6 +3,8 @@
     span = 'Назва'
     br
     = @bike_route.title
+  p
+    = image_tag @bike_route.image.url
   p class="description"
     span = 'Опис'
     br
