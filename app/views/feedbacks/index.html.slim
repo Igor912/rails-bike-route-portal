@@ -1,0 +1,10 @@
+.index_view_wrapper
+  - @feedbacks.each do |feedback|
+    .list_item_wrapper
+      h2 class="title" = link_to feedback.name, feedback
+      .description = feedback.description
+      p = feedback.email
+      .date = "#{time_ago_in_words(feedback.created_at)} ago"
+
+      - if user_signed_in? && current_user.admin?
+        = link_to 'Видалити', feedback, data: {:confirm => 'Чи ви впевненні?'}, :method => :delete

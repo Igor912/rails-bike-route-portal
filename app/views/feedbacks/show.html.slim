@@ -1,0 +1,17 @@
+#detail_wrapper
+  p class="title"
+    span = 'Ім\'я'
+    br
+    = @feedback.name
+  p
+    span = 'Email'
+    br
+    = @feedback.email
+  p class="description"
+    span = 'Опис звернення'
+    br
+    = @feedback.description
+  p class="date"
+    span = 'Створено:'
+    br
+    = @feedback.created_at.strftime("%B, %d, %Y")

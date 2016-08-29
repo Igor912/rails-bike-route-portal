@@ -1,0 +1,27 @@
+= form_for @feedback, html: {class: "form"} do |form|
+  - if @feedback.errors.any?
+    .flash_alert
+      h2 = "#{pluralize(@feedback.errors.count, "error")} prevented this comment from saving:"
+      ul
+        - @feedback.errors.full_messages.each do |msg|
+          li = msg
+
+  div
+    = form.label 'Ваше ім\'я'
+    br
+    = form.text_field :name
+
+  div
+    = form.label 'Електронна адреса для відповіді'
+    br
+    = form.text_field :email
+
+  div
+    = form.label 'Опис звернення'
+    br
+    = form.text_area :description
+
+
+  br
+  div
+    = form.submit "Надіслати"

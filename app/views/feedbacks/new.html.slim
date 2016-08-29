@@ -1,0 +1,9 @@
+#form_wrapper
+  - if user_signed_in? && current_user.admin?
+    br
+    br
+    = link_to 'Усі звернення', feedbacks_path, class: 'btn round_button'
+
+  h2 Якщо у вас є цікаві ідеї щодо покращення даного сервісу чи будь-яка об'єктивна критика, пишіть у цій формі:
+  br
+  = render 'form'
