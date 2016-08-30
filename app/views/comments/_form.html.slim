@@ -1,4 +1,4 @@
-= form_for @bike_route, html: {class: "form"} do |form|
+= form_for [@bike_route, @bike_route.comments.build ], html: {class: "form"} do |form|
   - if @bike_route.errors.any?
     .flash_alert
       h2 = "#{pluralize(@bike_route.errors.count, "error")} prevented this comment from saving:"
@@ -7,18 +7,13 @@
           li = msg
 
   div
-    = form.label 'Назва маршруту'
+    = form.label 'Ваше ім\'я'
     br
-    = form.text_field :title
-
+    = form.text_field :name
   div
-    = form.file_field :image
-
-  div
-    = form.label 'Опис'
+    = form.label 'Текст Коментаря'
     br
-    = form.text_area :description
-
+    = form.text_area :body
   br
   div
     = form.submit "Надіслати"

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160828155752) do
+ActiveRecord::Schema.define(version: 20160829215201) do
 
   create_table "bike_routes", force: :cascade do |t|
     t.string   "title"
@@ -23,6 +23,15 @@ ActiveRecord::Schema.define(version: 20160828155752) do
     t.string   "image_content_type"
     t.integer  "image_file_size"
     t.datetime "image_updated_at"
+  end
+
+  create_table "comments", force: :cascade do |t|
+    t.string   "name"
+    t.text     "body"
+    t.integer  "bike_route_id"
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
+    t.index ["bike_route_id"], name: "index_comments_on_bike_route_id"
   end
 
   create_table "feedbacks", force: :cascade do |t|

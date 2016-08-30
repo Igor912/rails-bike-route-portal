@@ -21,3 +21,13 @@
     span = 'Створено:'
     br
     = @bike_route.created_at.strftime("%B, %d, %Y")
+
+  #comments
+    h2 = "#{@bike_route.comments.count} Коментарів"
+    = render @bike_route.comments
+
+    br
+    br
+    #form_wrapper
+      h3 = "Додати коментар:"
+      = render "comments/form"
