@@ -13,7 +13,7 @@ html
       nav
         - if current_page?(new_bike_route_path)
           .title_buttons = link_to 'Повернутись', :back, class: 'btn round_button'
-        .title_buttons = link_to 'Вуломаршрути', bike_routes_path, class: 'btn button_without_border'
+        .title_buttons = link_to 'Веломаршрути', bike_routes_path, class: 'btn button_without_border'
         .title_buttons = link_to 'Велодоріжки', bike_routes_path, class: 'btn button_without_border'
         .title_buttons = link_to 'Зворотній звязок', new_feedback_path, class: 'btn button_without_border'
 

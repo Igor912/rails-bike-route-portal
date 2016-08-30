@@ -19,6 +19,11 @@
     br
     = form.text_area :description
 
+  div
+    = form.label 'Посилання на карту (для прикладу, GoogleMaps)'
+    br
+    = form.text_field :map_url
+
   br
   div
     = form.submit "Надіслати"

@@ -9,6 +9,10 @@
     span = 'Опис'
     br
     = @bike_route.description
+  p class="bike_route_map"
+    span = 'Карта маршруту'
+    br
+    iframe src = @bike_route.map_url
   p class="author"
     span = 'Автор'
     br

@@ -292,6 +292,12 @@ a.back_to_top {
       text-decoration: none;
       color: #2a2f35;
     }
+    .bike_route_map {
+      iframe {
+        width: 640px;
+        height: 480px;
+      }
+    }
     .date {
       color: #798a95;
     }
