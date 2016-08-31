@@ -15,7 +15,7 @@ html
           .title_buttons = link_to 'Повернутись', :back, class: 'btn round_button'
         .title_buttons = link_to 'Веломаршрути', bike_routes_path, class: 'btn button_without_border'
         .title_buttons = link_to 'Велодоріжки', bike_lanes_map_index_path, class: 'btn button_without_border'
-        .title_buttons = link_to 'Зворотній звязок', new_feedback_path, class: 'btn button_without_border'
+        .title_buttons = link_to 'Зворотній зв\'язок', new_feedback_path, class: 'btn button_without_border'
 
       - if user_signed_in?
         .buttons = link_to "Вийти", destroy_user_session_path, :method => :delete, class: 'btn round_button'

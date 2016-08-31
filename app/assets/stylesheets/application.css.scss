@@ -217,6 +217,7 @@ a.back_to_top {
         font-weight: 500;
         color: #2a2f35;
         margin: .5em 1.2em 0 0;
+        width: 70%;
         display:inline-block;
       }
       .date {
@@ -227,6 +228,65 @@ a.back_to_top {
       .author {
         margin: .5em 1.2em 0 0;
       }
+    }
+  }
+
+  #form_wrapper {
+    width: 60%;
+    padding: 0 3em 3em 3em;
+    .info_block {
+      background-color: rgba(240, 174, 182, 0.39);
+      padding: 10px;
+      margin-bottom: 30px;
+      border-radius: 7px;
+      .info_block_title {
+        font-size: 1em;
+        margin-bottom: 0.2em;
+      }
+      .info_paragraph {
+        font-size: 0.8em;
+        margin-bottom: 0.1em;
+      }
+    }
+    .form {
+      width: 80%;
+      div {
+        padding-bottom: 20px;
+      }
+      textarea {
+        height: 250px;
+      }
+    }
+  }
+
+  #detail_wrapper {
+    padding: 1em 3em;
+    margin: .5em 0 2em 0;
+    span {
+      font-size: .8em;
+    }
+    .title {
+      font-size: 1.3em;
+      line-height: 1;
+    }
+    .author {
+      font-weight: 500;
+      text-decoration: none;
+      color: #2a2f35;
+    }
+    .description {
+      color: #2a2f35;
+      width: 70%;
+      display:inline-block;
+    }
+    .bike_route_map {
+      iframe {
+        width: 740px;
+        height: 380px;
+      }
+    }
+    .date {
+      color: #798a95;
     }
   }
 
@@ -264,45 +324,6 @@ a.back_to_top {
     }
     input[type="text"], textarea {
       width: 95%;
-    }
-  }
-
-  #form_wrapper {
-    padding: 0 3em 3em 3em;
-    .form {
-      width: 40%;
-      div {
-        padding-bottom: 20px;
-      }
-      textarea {
-        height: 250px;
-      }
-    }
-  }
-
-  #detail_wrapper {
-    padding: 1em 3em;
-    margin: .5em 0 2em 0;
-    span {
-      font-size: .8em;
-    }
-    .title {
-      font-size: 1.3em;
-      line-height: 1;
-    }
-    .author {
-      font-weight: 500;
-      text-decoration: none;
-      color: #2a2f35;
-    }
-    .bike_route_map {
-      iframe {
-        width: 640px;
-        height: 480px;
-      }
-    }
-    .date {
-      color: #798a95;
     }
   }
 }

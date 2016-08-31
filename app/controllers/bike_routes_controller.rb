@@ -18,7 +18,7 @@ class BikeRoutesController < ApplicationController
     @bike_route = current_user.bike_routes.new(permit_bike_route)
 
     if @bike_route.save
-      flash[:notice] = "Маршрут успішно додано!"
+      flash[:notice] = "Дякуємо, ваш маршрут буде розглянуто модератором!"
       redirect_to bike_route_path(@bike_route)
     else
       flash[:alert] = @bike_route.errors.full_messages
