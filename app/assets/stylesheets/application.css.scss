@@ -317,34 +317,49 @@ a.back_to_top {
 
   #comments {
     h2 {
-      margin: 3em 0 1em 0;
+      margin: 2em 0 0 0;
       border-bottom: 1px solid #d6dce0;
       padding-bottom: 0.5em;
     }
     h3 {
-      //margin-top: 1em;
+      font-size: 1.3em;
+      border-bottom: 1px solid #d6dce0;
     }
-    .comment {
-      padding: .1em 2em 3em;
-      margin-bottom: 3em;
-      .comment_content {
-        float: left;
-        .comment_name {
-          margin: 1em 0 0 0;
-          font-size: 0.7em;
-          text-transform: uppercase;
+    #comments_link {
+      text-decoration: underline;
+    }
+    #comments_section {
+      display: none;
+      .comment {
+        padding: 1em 2em 3em;
+        margin-bottom: 1.5em;
+        .comment_content {
+          float: left;
+          .comment_name {
+            margin: 1em 0 0 0;
+            font-size: 0.7em;
+            text-transform: uppercase;
+          }
+          .comment_body {
+            font-size: 1.1em;
+            margin: 0.2em 0 0 0;
+          }
+          .comment_time {
+            margin-top: 0.5em;
+            font-size: .8em;
+            color: #798a95;
+          }
         }
-        .comment_body {
-          font-size: 1.2em;
-          margin: 0.2em 0 0 0;
-        }
-        .comment_time {
-          margin-top: 1.2em;
-          font-size: .8em;
+        .button {
+          float: right;
         }
       }
-      .button {
-        float: right;
+      #form_wrapper {
+        .form {
+          textarea {
+            height: 50px;
+          }
+        }
       }
     }
     input[type="text"], textarea {
@@ -365,7 +380,7 @@ input[type="text"] {
   height: 30px;
 }
 textarea {
-  min-height: 180px;
+  min-height: 70px;
 }
 input[type="number"] {
   height: 30px;

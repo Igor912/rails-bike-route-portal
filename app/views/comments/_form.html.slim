@@ -1,4 +1,4 @@
-= form_for [@bike_route, @bike_route.comments.build ], html: {class: "form"} do |form|
+= form_for [@bike_route, @bike_route.comments.build ], remote: true, html: {class: "form"} do |form|
   - if @bike_route.errors.any?
     .form_alert
       h2 = "#{pluralize(@bike_route.errors.count, "error")} prevented this comment from saving:"
@@ -9,11 +9,11 @@
   div
     = form.label 'Ваше ім\'я *'
     br
-    = form.text_field :name
+    = form.text_field :name, id: 'comment_name_field'
   div
     = form.label 'Текст Коментаря *'
     br
-    = form.text_area :body
+    = form.text_area :body, id: 'comment_body_field'
   br
   div
     = form.submit "Надіслати"

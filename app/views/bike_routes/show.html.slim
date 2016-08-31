@@ -28,11 +28,12 @@
     = @bike_route.created_at.strftime("%B, %d, %Y")
 
   #comments
-    h2 = "#{@bike_route.comments.count} Коментарів"
-    = render @bike_route.comments
+    h2 = link_to "#{@bike_route.comments.count} Коментарів", "", :remote => true, id: "comments_link"
+    section id="comments_section"
+      ol id="added_comments_container"
+        = render @bike_route.comments
 
-    br
-    br
-    #form_wrapper
-      h3 = "Додати коментар:"
-      = render "comments/form"
+      br
+      #form_wrapper
+        h3 = "Додати коментар:"
+        = render "comments/form"

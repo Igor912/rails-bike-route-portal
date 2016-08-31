@@ -19,7 +19,7 @@ html
 
       - if user_signed_in?
         .buttons = link_to "Вийти", destroy_user_session_path, :method => :delete, class: 'btn round_button'
-        .login_label = "Ви увійщли, як #{current_user.email.split('@')[0]}"
+        .login_label = "Ви увійшли, як #{current_user.email.split('@')[0]}"
       - else
         .buttons = link_to "Реєстрація", new_user_registration_path, class: 'btn round_button'
         .buttons = link_to "Увійти", new_user_session_path, class: 'btn round_button'

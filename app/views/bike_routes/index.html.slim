@@ -10,7 +10,8 @@
   - @bike_routes.each do |bike_route|
     .list_item_wrapper
       h2 class="title" = link_to bike_route.title, bike_route
-      p = image_tag bike_route.image.url(:medium)
+      p = link_to bike_route do
+        = image_tag bike_route.image.url(:medium)
       .description = bike_route.description
       .author = "Автор: #{get_author_name_from_bike_route(bike_route)}"
       .date = "#{time_ago_in_words(bike_route.created_at)} ago"
