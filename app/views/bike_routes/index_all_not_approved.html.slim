@@ -1,0 +1,18 @@
+.index_view_wrapper
+  h2 class="above_list_contant" Незатвердженні веломаршрути
+  - if user_signed_in?
+    .above_list_contant = link_to 'Додати Веломаршрут', new_bike_route_path, class: 'btn round_button'
+
+  - @not_approved_bike_routes.each do |bike_route|
+    .list_item_wrapper
+      h2 class="title" = link_to bike_route.title, bike_route
+      p = image_tag bike_route.image.url(:medium)
+      .description = bike_route.description
+      .author = "Автор: #{get_author_name_from_bike_route(bike_route)}"
+      .date = "#{time_ago_in_words(bike_route.created_at)} ago"
+
+      //= link_to 'Деталі', bike_route
+      - if user_signed_in? && current_user.admin?
+        = link_to 'Опублікувати', approve_bike_route_path(bike_route), class: 'admin_link_button'
+        = link_to 'Редагувати', edit_bike_route_path(bike_route), class: 'admin_link_button'
+        = link_to 'Видалити', bike_route, data: {:confirm => 'Чи ви впевненні?'}, :method => :delete, class: 'admin_link_button'

@@ -1,4 +1,12 @@
 .index_view_wrapper
+  - if user_signed_in? && current_user.admin?
+    .above_list_contant = link_to 'Усі незатверджені веломаршрути', index_all_not_approved_bike_routes_path, class: 'btn round_button'
+    br
+  - if user_signed_in?
+    .above_list_contant = link_to 'Додати Веломаршрут', new_bike_route_path, class: 'btn round_button'
+  - else
+    .above_list_contant = link_to 'Щоб додати веломаршрут, зареєструйтесь', new_user_registration_path, class: 'btn round_button'
+
   - @bike_routes.each do |bike_route|
     .list_item_wrapper
       h2 class="title" = link_to bike_route.title, bike_route
@@ -9,12 +17,6 @@
 
       //= link_to 'Деталі', bike_route
       - if user_signed_in? && current_user.admin?
-        = link_to 'Редагувати', edit_bike_route_path(bike_route)
-        = link_to 'Видалити', bike_route, data: {:confirm => 'Чи ви впевненні?'}, :method => :delete
-
-  br
-  .under_list_content
-    - if user_signed_in?
-      = link_to 'Додати Веломаршрут', new_bike_route_path, class: 'btn round_button'
-    - else
-      = link_to 'Щоб додати веломаршрут, зареєструйтесь', new_user_registration_path, class: 'btn round_button'
+        = link_to 'Деактивувати', disapprove_bike_route_path(bike_route), class: 'admin_link_button'
+        = link_to 'Редагувати', edit_bike_route_path(bike_route), class: 'admin_link_button'
+        = link_to 'Видалити', bike_route, data: {:confirm => 'Чи ви впевненні?'}, :method => :delete, class: 'admin_link_button'

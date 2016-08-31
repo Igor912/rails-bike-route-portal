@@ -1,9 +1,13 @@
 class BikeRoutesController < ApplicationController
   before_action :authenticate_user!, except: [:index, :show]
-  before_action :check_if_its_not_admin?, only: [:edit, :destroy]
+  before_action :check_if_its_not_admin?, only: [:edit, :destroy, :index_all_not_approved_bike_routes, :approve, :disapprove]
 
   def index
-    @bike_routes = BikeRoute.all
+    @bike_routes = BikeRoute.where(approved: true)
+  end
+
+  def index_all_not_approved
+    @not_approved_bike_routes = BikeRoute.where(approved: false)
   end
 
   def show
@@ -32,10 +36,26 @@ class BikeRoutesController < ApplicationController
 
   def update
     @bike_route = BikeRoute.find(params[:id])
-    if @bike_route.update(params[:bike_route].permit(:title, :description, :rating, :image, :map_url))
+    if @bike_route.update(params[:bike_route].permit(:title, :description, :rating, :image, :map_url, :approved))
       redirect_to @bike_route
     else
       render 'edit'
+    end
+  end
+
+  def approve
+    @bike_route = BikeRoute.find(params[:id])
+    @bike_route.approved = true
+    if @bike_route.save
+      redirect_to index_all_not_approved_bike_routes_path
+    end
+    end
+
+  def disapprove
+    @bike_route = BikeRoute.find(params[:id])
+    @bike_route.approved = false
+    if @bike_route.save
+      redirect_to index_all_not_approved_bike_routes_path
     end
   end
 

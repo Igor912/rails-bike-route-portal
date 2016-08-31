@@ -1,6 +1,6 @@
 = form_for @bike_route, html: {class: "form"} do |form|
   - if @bike_route.errors.any?
-    .flash_alert
+    .form_alert
       h2 = "#{pluralize(@bike_route.errors.count, "error")} prevented this comment from saving:"
       ul
         - @bike_route.errors.full_messages.each do |msg|

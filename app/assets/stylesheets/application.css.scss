@@ -38,15 +38,18 @@ a {
 }
 
 .flash_notice, .flash_alert {
+  position: fixed;
+  top: 0;
+  width: 100%;
   padding: 8px 35px 8px 14px;
-  margin-bottom: 20px;
+  //margin-bottom: 20px;
   text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
   border: 1px solid #fbeed5;
   //-webkit-border-radius: 4px;
   //-moz-border-radius: 4px;
   //border-radius: 4px;
   font-size: 14px;
-  line-height: 20px;
+  line-height: 3px;
 }
 .flash_notice {
   background-color: #dff0d8;
@@ -58,10 +61,24 @@ a {
   border-color: #eed3d7;
   color: #b94a48;
 }
+.form_alert {
+  padding: 8px 35px 8px 14px;
+  margin-bottom: 20px;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+  border: 1px solid #fbeed5;
+  //-webkit-border-radius: 4px;
+  //-moz-border-radius: 4px;
+  //border-radius: 4px;
+  font-size: 14px;
+  line-height: 20px;
+  background-color: rgb(242, 204, 204);
+  border-color: #eed3d7;
+  color: #b94a48;
+}
 
 .main_messages {
   .flash_notice, .flash_alert {
-    padding-top: 90px;
+    //padding-top: 90px;
   }
 }
 
@@ -106,6 +123,21 @@ a.back_to_top {
     a {
       color: #33acb7 !important;
     }
+  }
+}
+
+.info_block {
+  background-color: rgba(240, 174, 182, 0.39);
+  padding: 10px;
+  margin-bottom: 30px;
+  border-radius: 7px;
+  .info_block_title {
+    font-size: 1em;
+    margin-bottom: 0.2em;
+  }
+  .info_paragraph {
+    font-size: 0.8em;
+    margin-bottom: 0.1em;
   }
 }
 
@@ -188,12 +220,16 @@ a.back_to_top {
 }
 
 .content_wrapper {
-  padding-top: 80px;
+  padding-top: 83px;
   padding-bottom: 50px;
   .index_view_wrapper {
+    padding-top: 20px;
+    .above_list_contant {
+      padding-left: 20px;
+    }
     .under_list_content {
-        padding-left: 20px;
-        padding-top: 10px;
+      padding-left: 20px;
+      padding-top: 10px;
     }
     .list_item_wrapper {
       padding: 1.5em;
@@ -228,26 +264,15 @@ a.back_to_top {
       .author {
         margin: .5em 1.2em 0 0;
       }
+      .admin_link_button {
+        color: crimson;
+      }
     }
   }
 
   #form_wrapper {
     width: 60%;
     padding: 0 3em 3em 3em;
-    .info_block {
-      background-color: rgba(240, 174, 182, 0.39);
-      padding: 10px;
-      margin-bottom: 30px;
-      border-radius: 7px;
-      .info_block_title {
-        font-size: 1em;
-        margin-bottom: 0.2em;
-      }
-      .info_paragraph {
-        font-size: 0.8em;
-        margin-bottom: 0.1em;
-      }
-    }
     .form {
       width: 80%;
       div {
@@ -260,7 +285,7 @@ a.back_to_top {
   }
 
   #detail_wrapper {
-    padding: 1em 3em;
+    padding: 0 3em;
     margin: .5em 0 2em 0;
     span {
       font-size: .8em;

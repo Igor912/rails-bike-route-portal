@@ -6,6 +6,11 @@ Rails.application.routes.draw do
 
   resources :bike_routes do
     resources :comments
+    collection do
+      get :index_all_not_approved
+    end
+    get :approve, :on => :member
+    get :disapprove, :on => :member
   end
 
   resources :feedbacks
