@@ -10,6 +10,7 @@
  * files in this directory. Styles in this file should be added after the last require_* statement.
  * It is generally better to create a new file per style scope.
  *
+ *= require font-awesome
  *= require_self
  */
 
@@ -37,9 +38,18 @@ a {
   color: inherit;
 }
 
+.clearfix:before, .clearfix:after {
+  content: " ";
+  display: table;
+}
+
+.clearfix:after {
+  clear: both;
+}
+
 .flash_notice, .flash_alert {
   position: fixed;
-  top: 0;
+  top: 82px;
   width: 100%;
   padding: 8px 35px 8px 14px;
   //margin-bottom: 20px;
@@ -192,6 +202,16 @@ a.back_to_top {
       margin-left: .5em;
     }
   }
+  .logo_label {
+    //margin: -.5em;
+    margin-bottom: -.5em;
+    margin-top: -.4em;
+    float: left;
+    font-size: 2em;
+    display: inline;
+    padding-right: 2.5em;
+    padding-left: 2em;
+  }
   .button_without_border {
     display: inline;
     margin-top: -6px;
@@ -200,75 +220,21 @@ a.back_to_top {
 }
 
 #footer {
-  padding: 2em 5%;
-  margin-top: 5em;
-  border-top: 7px solid #33CD99;
-  background: #2B2E2E;
-  color: #f5fbff;
+  position: fixed;
+  bottom: 0;
   font-size: .8em;
-  text-align: center;
-  p {
-    display: inline;
-  }
-  a {
-    color: #f5fbff;
-    text-decoration: none;
-  }
+  margin: 2em;
+  color: #9B9B9B;
   .copyright{
     float: left;
   }
 }
 
 .content_wrapper {
+  width: 80%;
+  margin: 0 auto;
   padding-top: 83px;
   padding-bottom: 50px;
-  .index_view_wrapper {
-    padding-top: 20px;
-    .above_list_contant {
-      padding-left: 20px;
-    }
-    .under_list_content {
-      padding-left: 20px;
-      padding-top: 10px;
-    }
-    .list_item_wrapper {
-      padding: 1.5em;
-      border-bottom: 1px solid #d6dce0;
-      span {
-        font-size: .7em;
-      }
-      a {
-        text-decoration: none;
-        color: #1c5b47;
-        font-size: 1em;
-        padding-right: 1.2em;
-        &:hover {
-          color: #33acb7;
-        }
-      }
-      .title {
-        margin: 0;
-      }
-      .description {
-        font-weight: 500;
-        color: #2a2f35;
-        margin: .5em 1.2em 0 0;
-        width: 70%;
-        display:inline-block;
-      }
-      .date {
-        color: #798a95;
-        margin: .5em 1.2em 0 0;
-        display:inline-block;
-      }
-      .author {
-        margin: .5em 1.2em 0 0;
-      }
-      .admin_link_button {
-        color: crimson;
-      }
-    }
-  }
 
   #form_wrapper {
     width: 60%;
@@ -281,89 +247,6 @@ a.back_to_top {
       textarea {
         height: 250px;
       }
-    }
-  }
-
-  #detail_wrapper {
-    padding: 0 3em;
-    margin: .5em 0 2em 0;
-    span {
-      font-size: .8em;
-    }
-    .title {
-      font-size: 1.3em;
-      line-height: 1;
-    }
-    .author {
-      font-weight: 500;
-      text-decoration: none;
-      color: #2a2f35;
-    }
-    .description {
-      color: #2a2f35;
-      width: 70%;
-      display:inline-block;
-    }
-    .bike_route_map {
-      iframe {
-        width: 740px;
-        height: 380px;
-      }
-    }
-    .date {
-      color: #798a95;
-    }
-  }
-
-  #comments {
-    h2 {
-      margin: 2em 0 0 0;
-      border-bottom: 1px solid #d6dce0;
-      padding-bottom: 0.5em;
-    }
-    h3 {
-      font-size: 1.3em;
-      border-bottom: 1px solid #d6dce0;
-    }
-    #comments_link {
-      text-decoration: underline;
-    }
-    #comments_section {
-      display: none;
-      .comment {
-        padding: 1em 2em 3em;
-        margin-bottom: 1.5em;
-        .comment_content {
-          float: left;
-          .comment_name {
-            margin: 1em 0 0 0;
-            font-size: 0.7em;
-            text-transform: uppercase;
-          }
-          .comment_body {
-            font-size: 1.1em;
-            margin: 0.2em 0 0 0;
-          }
-          .comment_time {
-            margin-top: 0.5em;
-            font-size: .8em;
-            color: #798a95;
-          }
-        }
-        .button {
-          float: right;
-        }
-      }
-      #form_wrapper {
-        .form {
-          textarea {
-            height: 50px;
-          }
-        }
-      }
-    }
-    input[type="text"], textarea {
-      width: 95%;
     }
   }
 }

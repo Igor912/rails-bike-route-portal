@@ -6,6 +6,10 @@ Rails.application.routes.draw do
 
   resources :bike_routes do
     resources :comments
+    member do
+      get "like", to: "bike_routes#upvote"
+      get "dislike", to: "bike_routes#downvote"
+    end
     collection do
       get :index_all_not_approved
     end

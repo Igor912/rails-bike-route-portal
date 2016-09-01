@@ -1,39 +1,53 @@
-#detail_wrapper
-  p class="title"
-    span = 'Назва'
-    br
-    = @bike_route.title
-  p
-    = image_tag @bike_route.image.url(:medium)
-  p class="description"
-    span = 'Опис'
-    br
-    = @bike_route.description
-  - if @bike_route.map_url.size > 0
-    p class="bike_route_map"
-      span = 'Карта маршруту'
-      br
-      iframe src = @bike_route.map_url
-  p class="author"
-    span = 'Автор'
-    br
-    = get_author_name_from_bike_route(@bike_route)
-  /p class="rating"
-  /  span = 'Оцінка'
-  /  br
-  /  = @bike_route.rating
-  p class="date"
-    span = 'Створено:'
-    br
-    = @bike_route.created_at.strftime("%B, %d, %Y")
+#bike_route_show
+  h1 = @bike_route.title
+  p.username = "Додано #{@bike_route.created_at.strftime("%B, %d, %Y")} користувачем #{get_author_name_from_bike_route(@bike_route)}"
+  .clearfix
+    .bike_route_image_description
+      = image_tag @bike_route.image.url(:medium)
+      .description= simple_format(@bike_route.description)
+      - if @bike_route.map_url.size > 0
+        .bike_route_map
+          span = 'Карта маршруту'
+          br
+          iframe src = @bike_route.map_url
+    .bike_route_data
+      = link_to like_bike_route_path(@bike_route), method: :get, class: :data do
+        i.fa.fa-thumbs-o-up
+        = "#{@bike_route.get_upvotes.size} Подобається"
+      = link_to dislike_bike_route_path(@bike_route), method: :get, class: :data do
+        i.fa.fa-thumbs-o-down
+        = "#{@bike_route.get_downvotes.size} Не подобається"
+      p.data
+        i.fa.fa-comments-o
+        = link_to "#{@bike_route.comments.count} Коментарі", "", :remote => true, id: "comments_link"
+      #comments
+        section id="comments_section"
+          ol id="added_comments_container"
+            = render @bike_route.comments
+          br
+          #form_wrapper
+            h3 = "Додати коментар:"
+            = render "comments/form"
 
-  #comments
-    h2 = link_to "#{@bike_route.comments.count} Коментарів", "", :remote => true, id: "comments_link"
-    section id="comments_section"
-      ol id="added_comments_container"
-        = render @bike_route.comments
+      - if user_signed_in? && current_user.admin?
+        = link_to "Редагувати", edit_bike_route_path(@bike_route), class: "data"
+        = link_to "Видалити", bike_route_path(@bike_route), method: :delete, data: {confirm: "Чи ви впевненні?"}, class: "data"
 
-      br
-      #form_wrapper
-        h3 = "Додати коментар:"
-        = render "comments/form"
+      #random_bike_route
+        h3 Випадковий маршрут
+        .bike_route
+          .bike_route_image
+            = link_to (image_tag @random_bike_route.image.url(:medium)), bike_route_path(@random_bike_route)
+          .bike_route_content
+            .title
+              h2= link_to @random_bike_route.title, bike_route_path(@random_bike_route)
+            .data.clearfix
+              p.username
+                = "Додано користувачем #{get_author_name_from_bike_route(@random_bike_route)} #{time_ago_in_words(@random_bike_route.created_at)} ago"
+              p.buttons
+                span
+                  i.fa.fa-comments-o
+                  = @random_bike_route.comments.size
+                  span
+                    i.fa.fa-thumbs-o-up
+                    = @random_bike_route.get_upvotes.size

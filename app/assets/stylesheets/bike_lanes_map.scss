@@ -1,11 +1,13 @@
 .static_page_wrapper {
+  width: 100%;
+  align-items: center;
   padding: 1em 3em;
   margin: .5em 0 2em 0;
   span {
     font-size: .8em;
   }
   iframe {
-    width: 740px;
-    height: 380px;
+    width: 80%;
+    height: 480px;
   }
 }
