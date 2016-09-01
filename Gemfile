@@ -54,5 +54,7 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'slim-rails'
 gem 'devise'
 gem 'paperclip'
+#its for using amazon storage for store paperclip images on heroku
+gem 'aws-sdk', '~> 2.3'
 gem 'acts_as_votable', '~> 0.10.0'
 gem "font-awesome-rails"
