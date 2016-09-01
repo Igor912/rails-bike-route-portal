@@ -33,21 +33,22 @@
         = link_to "Редагувати", edit_bike_route_path(@bike_route), class: "data"
         = link_to "Видалити", bike_route_path(@bike_route), method: :delete, data: {confirm: "Чи ви впевненні?"}, class: "data"
 
-      #random_bike_route
-        h3 Випадковий маршрут
-        .bike_route
-          .bike_route_image
-            = link_to (image_tag @random_bike_route.image.url(:medium)), bike_route_path(@random_bike_route)
-          .bike_route_content
-            .title
-              h2= link_to @random_bike_route.title, bike_route_path(@random_bike_route)
-            .data.clearfix
-              p.username
-                = "Додано користувачем #{get_author_name_from_bike_route(@random_bike_route)} #{time_ago_in_words(@random_bike_route.created_at)} ago"
-              p.buttons
-                span
-                  i.fa.fa-comments-o
-                  = @random_bike_route.comments.size
+      - if @random_bike_route
+        #random_bike_route
+          h3 Випадковий маршрут
+          .bike_route
+            .bike_route_image
+              = link_to (image_tag @random_bike_route.image.url(:medium)), bike_route_path(@random_bike_route)
+            .bike_route_content
+              .title
+                h2= link_to @random_bike_route.title, bike_route_path(@random_bike_route)
+              .data.clearfix
+                p.username
+                  = "Додано користувачем #{get_author_name_from_bike_route(@random_bike_route)} #{time_ago_in_words(@random_bike_route.created_at)} ago"
+                p.buttons
                   span
-                    i.fa.fa-thumbs-o-up
-                    = @random_bike_route.get_upvotes.size
+                    i.fa.fa-comments-o
+                    = @random_bike_route.comments.size
+                    span
+                      i.fa.fa-thumbs-o-up
+                      = @random_bike_route.get_upvotes.size
