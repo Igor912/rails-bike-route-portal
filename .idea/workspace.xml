@@ -2,42 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="18e57ff0-a721-4bfd-8fae-d535a24ba981" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/system/bike_routes/images/000/000/017/medium/bw8KUzftXFs.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/system/bike_routes/images/000/000/017/original/bw8KUzftXFs.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/system/bike_routes/images/000/000/017/small/bw8KUzftXFs.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/system/bike_routes/images/000/000/017/thumb/bw8KUzftXFs.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/system/bike_routes/images/000/000/018/medium/TTrb5lgjaZI.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/system/bike_routes/images/000/000/018/original/TTrb5lgjaZI.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/system/bike_routes/images/000/000/018/small/TTrb5lgjaZI.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/system/bike_routes/images/000/000/018/thumb/TTrb5lgjaZI.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/system/bike_routes/images/000/000/019/medium/C46R9cJ19qs.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/system/bike_routes/images/000/000/019/original/C46R9cJ19qs.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/system/bike_routes/images/000/000/019/small/C46R9cJ19qs.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/system/bike_routes/images/000/000/019/thumb/C46R9cJ19qs.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/system/bike_routes/images/000/000/020/medium/photo-50485628_369928398-825x510.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/system/bike_routes/images/000/000/020/original/photo-50485628_369928398-825x510.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/system/bike_routes/images/000/000/020/small/photo-50485628_369928398-825x510.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/system/bike_routes/images/000/000/020/thumb/photo-50485628_369928398-825x510.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/system/bike_routes/images/000/000/021/medium/photo-50485628_382789137-825x510.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/system/bike_routes/images/000/000/021/original/photo-50485628_382789137-825x510.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/system/bike_routes/images/000/000/021/small/photo-50485628_382789137-825x510.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/system/bike_routes/images/000/000/021/thumb/photo-50485628_382789137-825x510.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/system/bike_routes/images/000/000/023/medium/photo90542559_390595192.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/system/bike_routes/images/000/000/023/original/photo90542559_390595192.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/system/bike_routes/images/000/000/023/small/photo90542559_390595192.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/system/bike_routes/images/000/000/023/thumb/photo90542559_390595192.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/system/bike_routes/images/000/000/024/medium/photo-25396881_272240569.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/system/bike_routes/images/000/000/024/original/photo-25396881_272240569.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/system/bike_routes/images/000/000/024/small/photo-25396881_272240569.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/system/bike_routes/images/000/000/024/thumb/photo-25396881_272240569.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/system/bike_routes/images/000/000/025/medium/photo-50485628_369928398-825x510.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/system/bike_routes/images/000/000/025/original/photo-50485628_369928398-825x510.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/system/bike_routes/images/000/000/025/small/photo-50485628_369928398-825x510.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/system/bike_routes/images/000/000/025/thumb/photo-50485628_369928398-825x510.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/system/bike_routes/images/000/000/026/medium/HwvY2fm5TnQ.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/system/bike_routes/images/000/000/026/original/HwvY2fm5TnQ.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/system/bike_routes/images/000/000/026/small/HwvY2fm5TnQ.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/system/bike_routes/images/000/000/026/thumb/HwvY2fm5TnQ.jpg" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile" afterPath="$PROJECT_DIR$/Gemfile" />
     </list>
     <ignored path="VeloUkraine.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -67,11 +33,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="bike_routes_controller.rb" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/controllers/bike_routes_controller.rb">
+      <file leaf-file-name="Gemfile" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Gemfile">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="319">
-              <caret line="58" column="12" selection-start-line="58" selection-start-column="6" selection-end-line="58" selection-end-column="12" />
+            <state relative-caret-position="525">
+              <caret line="46" column="10" selection-start-line="46" selection-start-column="10" selection-end-line="46" selection-end-column="10" />
               <folding />
             </state>
           </provider>
@@ -125,7 +91,6 @@
         <option value="$PROJECT_DIR$/app/controllers/comments_controller.rb" />
         <option value="$PROJECT_DIR$/app/views/bike_lanes_map/index.html.slim" />
         <option value="$PROJECT_DIR$/config/routes.rb" />
-        <option value="$PROJECT_DIR$/Gemfile" />
         <option value="$PROJECT_DIR$/app/views/bike_routes/index_all_not_approved.html.slim" />
         <option value="$PROJECT_DIR$/app/controllers/bike_routes_controller.rb" />
         <option value="$PROJECT_DIR$/app/views/bike_routes/index.html.slim" />
@@ -136,6 +101,7 @@
         <option value="$PROJECT_DIR$/app/views/layouts/application.html.slim" />
         <option value="$PROJECT_DIR$/app/assets/stylesheets/application.css.scss" />
         <option value="$PROJECT_DIR$/app/views/bike_routes/new.html.slim" />
+        <option value="$PROJECT_DIR$/Gemfile" />
       </list>
     </option>
   </component>
@@ -600,12 +566,12 @@
       <workItem from="1472486519629" duration="11319000" />
       <workItem from="1472559836142" duration="2433000" />
       <workItem from="1472568509700" duration="202000" />
-      <workItem from="1472568727899" duration="58518000" />
+      <workItem from="1472568727899" duration="58906000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="119052000" />
+    <option name="totallyTimeSpent" value="119440000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -931,14 +897,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Gemfile">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="565">
-          <caret line="53" column="5" selection-start-line="53" selection-start-column="5" selection-end-line="53" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/bike_routes/index_all_not_approved.html.slim">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="345">
@@ -1033,6 +991,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="319">
           <caret line="58" column="12" selection-start-line="58" selection-start-column="6" selection-end-line="58" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Gemfile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="525">
+          <caret line="46" column="10" selection-start-line="46" selection-start-column="10" selection-end-line="46" selection-end-column="10" />
           <folding />
         </state>
       </provider>
