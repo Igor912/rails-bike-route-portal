@@ -41,7 +41,7 @@
               = link_to (image_tag @random_bike_route.image.url(:medium)), bike_route_path(@random_bike_route)
             .bike_route_content
               .title
-                h2= link_to @random_bike_route.title, bike_route_path(@random_bike_route)
+                h2= link_to @random_bike_route.title, bike_route_path(@random_bike_route) 
               .data.clearfix
                 p.username
                   = "Додано користувачем #{get_author_name_from_bike_route(@random_bike_route)} #{time_ago_in_words(@random_bike_route.created_at)} ago"
