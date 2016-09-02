@@ -45,7 +45,6 @@ end
 
 group :production do
   gem 'pg'
-  gem 'rails_12factor'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
@@ -56,5 +55,3 @@ gem 'devise'
 gem 'paperclip'
 gem 'acts_as_votable', '~> 0.10.0'
 gem "font-awesome-rails"
-#its for using amazon storage for store paperclip images on heroku
-gem 'aws-sdk', '~> 2.3'
