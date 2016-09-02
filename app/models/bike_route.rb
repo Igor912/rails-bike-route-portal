@@ -3,7 +3,7 @@ class BikeRoute < ApplicationRecord
   belongs_to :user
   has_many :comments, dependent: :destroy
 
-  has_attached_file :image, styles: { medium: "600x350#", small: "400x300#", thumb: "130x100#" }, :storage => :s3, :s3_credentials => config.paperclip_defaults
+  has_attached_file :image, styles: { medium: "600x350#", small: "400x300#", thumb: "130x100#" }
   validates_attachment_content_type :image, content_type: /\Aimage\/.*\z/
 
   validates :title, :description, :user_id, presence: { message: "не може бути пустим" }
