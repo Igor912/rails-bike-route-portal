@@ -12,7 +12,8 @@ class BikeRoutesController < ApplicationController
   end
 
   def show
-    @random_bike_route = BikeRoute.where.not(id: @bike_route).order("RANDOM()").first
+    @bike_routes = BikeRoute.where(approved: true)
+    @random_bike_route = @bike_routes.where.not(id: @bike_route).order("RANDOM()").first
   end
 
   def new
