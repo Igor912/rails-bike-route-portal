@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="18e57ff0-a721-4bfd-8fae-d535a24ba981" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile" afterPath="$PROJECT_DIR$/Gemfile" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/bike_route.rb" afterPath="$PROJECT_DIR$/app/models/bike_route.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/environments/production.rb" afterPath="$PROJECT_DIR$/config/environments/production.rb" />
-    </list>
+    <list default="true" id="18e57ff0-a721-4bfd-8fae-d535a24ba981" name="Default" comment="" />
     <ignored path="VeloUkraine.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="$PROJECT_DIR$/.bundle/" />
@@ -644,7 +640,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="126758000" />
+    <option name="totallyTimeSpent" value="126892000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
