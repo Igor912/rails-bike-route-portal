@@ -16,6 +16,7 @@ html
           .title_buttons = link_to 'Повернутись', :back, class: 'btn round_button'
         .title_buttons = link_to 'Веломаршрути', root_path, class: 'btn button_without_border'
         .title_buttons = link_to 'Велодоріжки', bike_lanes_map_index_path, class: 'btn button_without_border'
+        .title_buttons = link_to 'Про проект', about_index_path, class: 'btn button_without_border'
         .title_buttons = link_to 'Зворотній зв\'язок', new_feedback_path, class: 'btn button_without_border'
 
       - if user_signed_in?

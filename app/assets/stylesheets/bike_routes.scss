@@ -124,7 +124,7 @@
       border: 1px solid #E4E4E4;
       border-radius: 0.3rem;
       .bike_route_image {
-        height: 200px;
+        max-height: 200px;
         overflow: hidden;
         img {
           width: 100%;
@@ -137,7 +137,12 @@
           font-weight: 100;
           padding: 1rem 5%;
           border-bottom: 1px solid #E4E4E4;
-          font-size: 1.25rem;
+          font-size: 1.1rem;
+          height: 1.3rem;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          max-width: 100%;
           a {
             text-decoration: none;
             color: #333233;
