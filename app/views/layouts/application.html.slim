@@ -11,7 +11,7 @@ html
   body
     #header
       nav
-        .logo_label = 'ЛьвівБайк'
+        .logo_label = link_to 'ЛьвівБайк', root_path
         - if current_page?(new_bike_route_path)
           .title_buttons = link_to 'Повернутись', :back, class: 'btn round_button'
         .title_buttons = link_to 'Веломаршрути', root_path, class: 'btn button_without_border'
